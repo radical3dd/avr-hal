@@ -17,6 +17,8 @@ serialport = "4.0.0"
 anyhow = "1.0.38"
 git-version = "0.3.4"
 ctrlc = "3.2.1"
+defmt-decoder = { version = "0.3.2", features = ["unstable"] }
+log = "0.4"
 
 [dependencies.structopt]
 version = "0.3.21"

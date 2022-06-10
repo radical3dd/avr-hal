@@ -64,6 +64,8 @@ struct Args {
 }
 
 fn main() {
+    //env_logger::init();
+
     match ravedude() {
         Ok(()) => (),
         Err(e) => {
@@ -141,7 +143,7 @@ fn ravedude() -> anyhow::Result<()> {
         );
         // Empty line for visual consistency
         eprintln!();
-        console::open(&port, baudrate)?;
+        console::open(&port, baudrate, args.bin)?;
     } else if args.bin.is_none() && port.is_some() {
         warning!("you probably meant to add -c/--open-console?");
     }
